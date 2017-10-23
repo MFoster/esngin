@@ -5,8 +5,11 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     transform: [
-                        ['babelify', {'presets': ['env', 'react'], 'sourceMap': true}]
-                    ]
+                        ['babelify', {'presets': ['env', 'react']}]
+                    ],
+                    browserifyOptions: {
+                        debug: true
+                    }
                 },
                 files: {
                     'output/esngin.app.js' : ['input/**/*.js']
