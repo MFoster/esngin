@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  node:
+    build: .
+    environment:
+      - ES_ENGINE_OUTPUT
+      - ES_ENGINE_INPUT
+    volumes:
+      - ${ES_ENGINE_OUTPUT}:/tmp/node/output
+      - ${ES_ENGINE_INPUT}:/tmp/node/input
